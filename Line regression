@@ -1,0 +1,20 @@
+y = wx + b
+b - intercept
+
+MSE = 1/n [​∑(y_p ​− y)^2]
+covers both negative and positive error
+
+dw = (2/n) * np.sum(x*(y_pred-y))
+db = (2/n) * np.sum(y_pred-y)
+
+derivative tells the direction- negative then move right, if positive then left
+
+new weight = w - derivative 
+
+Instead of using the full derivative:
+Use a fraction:
+w = w - lr * derivative
+
+gradient descent = w - lr * gradient
+
+Model makes prediction -> Compare with actual answer -> Measure error (loss) -> Find slope of error curve (gradient) -> Take a small step downhill -> Repeat
